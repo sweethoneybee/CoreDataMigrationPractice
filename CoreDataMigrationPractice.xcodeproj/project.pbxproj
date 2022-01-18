@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4073A29427968F6F00FBEA20 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A29227968F6F00FBEA20 /* User+CoreDataClass.swift */; };
+		4073A29527968F6F00FBEA20 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A29327968F6F00FBEA20 /* User+CoreDataProperties.swift */; };
+		4073A29A2796977100FBEA20 /* GenderMigrationV1toV2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A2992796977100FBEA20 /* GenderMigrationV1toV2.swift */; };
+		4073A2A22796B21B00FBEA20 /* Model-V1-to-V2.xcmappingmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4073A2A12796B21B00FBEA20 /* Model-V1-to-V2.xcmappingmodel */; };
+		4073A2A52796B2D800FBEA20 /* Gender+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A2A32796B2D800FBEA20 /* Gender+CoreDataClass.swift */; };
+		4073A2A62796B2D800FBEA20 /* Gender+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4073A2A42796B2D800FBEA20 /* Gender+CoreDataProperties.swift */; };
 		40A1D697278F3E17000B1A5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A1D696278F3E17000B1A5E /* AppDelegate.swift */; };
 		40A1D699278F3E17000B1A5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A1D698278F3E17000B1A5E /* SceneDelegate.swift */; };
 		40A1D69B278F3E17000B1A5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A1D69A278F3E17000B1A5E /* ViewController.swift */; };
@@ -17,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4073A29227968F6F00FBEA20 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4073A29327968F6F00FBEA20 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		4073A2962796963900FBEA20 /* CoreDataMigrationPractice 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "CoreDataMigrationPractice 2.xcdatamodel"; sourceTree = "<group>"; };
+		4073A2992796977100FBEA20 /* GenderMigrationV1toV2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderMigrationV1toV2.swift; sourceTree = "<group>"; };
+		4073A2A12796B21B00FBEA20 /* Model-V1-to-V2.xcmappingmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcmappingmodel; path = "Model-V1-to-V2.xcmappingmodel"; sourceTree = "<group>"; };
+		4073A2A32796B2D800FBEA20 /* Gender+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gender+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		4073A2A42796B2D800FBEA20 /* Gender+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Gender+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		40A1D693278F3E17000B1A5E /* CoreDataMigrationPractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataMigrationPractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A1D696278F3E17000B1A5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		40A1D698278F3E17000B1A5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +71,10 @@
 		40A1D695278F3E17000B1A5E /* CoreDataMigrationPractice */ = {
 			isa = PBXGroup;
 			children = (
+				4073A2A32796B2D800FBEA20 /* Gender+CoreDataClass.swift */,
+				4073A2A42796B2D800FBEA20 /* Gender+CoreDataProperties.swift */,
+				4073A29227968F6F00FBEA20 /* User+CoreDataClass.swift */,
+				4073A29327968F6F00FBEA20 /* User+CoreDataProperties.swift */,
 				40A1D696278F3E17000B1A5E /* AppDelegate.swift */,
 				40A1D698278F3E17000B1A5E /* SceneDelegate.swift */,
 				40A1D69A278F3E17000B1A5E /* ViewController.swift */,
@@ -66,6 +83,8 @@
 				40A1D6A4278F3E18000B1A5E /* LaunchScreen.storyboard */,
 				40A1D6A7278F3E18000B1A5E /* Info.plist */,
 				40A1D69F278F3E17000B1A5E /* CoreDataMigrationPractice.xcdatamodeld */,
+				4073A2A12796B21B00FBEA20 /* Model-V1-to-V2.xcmappingmodel */,
+				4073A2992796977100FBEA20 /* GenderMigrationV1toV2.swift */,
 			);
 			path = CoreDataMigrationPractice;
 			sourceTree = "<group>";
@@ -141,10 +160,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4073A2A52796B2D800FBEA20 /* Gender+CoreDataClass.swift in Sources */,
 				40A1D69B278F3E17000B1A5E /* ViewController.swift in Sources */,
+				4073A2A62796B2D800FBEA20 /* Gender+CoreDataProperties.swift in Sources */,
+				4073A2A22796B21B00FBEA20 /* Model-V1-to-V2.xcmappingmodel in Sources */,
 				40A1D697278F3E17000B1A5E /* AppDelegate.swift in Sources */,
+				4073A29527968F6F00FBEA20 /* User+CoreDataProperties.swift in Sources */,
 				40A1D6A1278F3E17000B1A5E /* CoreDataMigrationPractice.xcdatamodeld in Sources */,
 				40A1D699278F3E17000B1A5E /* SceneDelegate.swift in Sources */,
+				4073A29427968F6F00FBEA20 /* User+CoreDataClass.swift in Sources */,
+				4073A29A2796977100FBEA20 /* GenderMigrationV1toV2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -367,9 +392,10 @@
 		40A1D69F278F3E17000B1A5E /* CoreDataMigrationPractice.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				4073A2962796963900FBEA20 /* CoreDataMigrationPractice 2.xcdatamodel */,
 				40A1D6A0278F3E17000B1A5E /* CoreDataMigrationPractice.xcdatamodel */,
 			);
-			currentVersion = 40A1D6A0278F3E17000B1A5E /* CoreDataMigrationPractice.xcdatamodel */;
+			currentVersion = 4073A2962796963900FBEA20 /* CoreDataMigrationPractice 2.xcdatamodel */;
 			path = CoreDataMigrationPractice.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -14,7 +14,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        
+        // v1 mock data
+//        if UserDefaults.standard.bool(forKey: "mock") == false {
+//            print("목데이터 생성")
+//
+//            let names = ["김철수", "박영희", "이상우", "노진구", "이비실", "김호랑"]
+//            let sex = ["man", "woman"]
+//
+//            for _ in 0..<10 {
+//                let user = User(context: persistentContainer.viewContext)
+//                user.name = names[Int.random(in: 0..<names.count)]
+//                user.sex = sex[Int.random(in: 0..<sex.count)]
+//                saveContext()
+//            }
+//            UserDefaults.standard.setValue(true, forKey: "mock")
+//        }
+        
+        // v2 mock data
+//        if UserDefaults.standard.bool(forKey: "mock") == false {
+//            print("목데이터 생성")
+//
+//            let names = ["김철수", "박영희", "이상우", "노진구", "이비실", "김호랑"]
+//            let fetchRequest = Gender.fetchRequest()
+//            let results = try? persistentContainer.viewContext.fetch(fetchRequest)
+//            for _ in 0..<10 {
+//                let user = User(context: persistentContainer.viewContext)
+//                user.name = names[Int.random(in: 0..<names.count)]
+//                if let results = results {
+//                    user.gender = results.count != 0 ? results[Int.random(in: 0..<results.count)] : nil
+//                }
+//                saveContext()
+//            }
+//            UserDefaults.standard.setValue(true, forKey: "mock")
+//        }
+        
         return true
     }
 
@@ -42,19 +77,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
          error conditions that could cause the creation of the store to fail.
         */
         let container = NSPersistentContainer(name: "CoreDataMigrationPractice")
+        
+        let persistentStoreDescription = container.persistentStoreDescriptions.first
+        persistentStoreDescription?.setOption(true as NSNumber, forKey: NSMigratePersistentStoresAutomaticallyOption)
+        persistentStoreDescription?.setOption(false as NSNumber, forKey: NSInferMappingModelAutomaticallyOption)
+        
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                 
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
                 fatalError("Unresolved error \(error), \(error.userInfo)")
             }
         })
